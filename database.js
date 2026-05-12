@@ -19,7 +19,11 @@ async function inserirMensagem(dados) {
     ])
     .select();
 
-  if (error) throw error;
+  if (error) {
+    console.error('[Supabase Error]:', error);
+    throw error;
+  }
+  
   return { lastInsertRowid: data[0].id };
 }
 
