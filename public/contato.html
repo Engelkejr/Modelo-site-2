@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Entre em contato com a Clínica Face & Arte. Formulário de agendamento, localização e redes sociais." />
+  <title>Contato - Clínica Face &amp; Arte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+</head>
+<body>
+
+  <header class="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Clínica Face & Arte - Início">
+        <span class="navbar__logo-main">Face &amp; Arte</span>
+        <span class="navbar__logo-sub">Clínica Estética</span>
+      </a>
+      <nav class="navbar__nav" aria-label="Menu principal">
+        <a href="index.html"       class="navbar__link">Início</a>
+        <a href="sobre.html"       class="navbar__link">Quem Somos</a>
+        <a href="tratamentos.html" class="navbar__link">Tratamentos</a>
+        <a href="contato.html"     class="navbar__link">Contato</a>
+        <a href="contato.html" class="btn btn--primary navbar__cta">Agendar Consulta</a>
+      </nav>
+      <button class="navbar__toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <span class="tag">Fale Conosco</span>
+        <h1 class="section-title">
+          Estamos prontos para<br><em>receber você</em>
+        </h1>
+        <div class="divider" style="margin-inline: auto;"></div>
+        <p class="section-lead" style="margin-inline: auto; text-align: center;">
+          Agende sua consulta, tire dúvidas ou solicite um orçamento. Nossa equipe retorna em até 24h úteis.
+        </p>
+      </div>
+    </section>
+
+    <section class="section contact-hero">
+      <div class="container">
+        <div class="contact-hero__grid">
+
+          <aside class="contact-info reveal">
+            <span class="tag">Onde estamos</span>
+            <h2 class="section-title" style="font-size: clamp(1.8rem, 4vw, 2.5rem);">
+              Informações de <em>Contato</em>
+            </h2>
+            <div class="divider"></div>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon" aria-hidden="true">📍</div>
+              <div>
+                <p class="contact-info__label">Endereço</p>
+                <p class="contact-info__value">
+                  Av. Paulista, 1000 -Sala 42<br>
+                  Bela Vista, São Paulo - SP<br>
+                  CEP 01310-100
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon" aria-hidden="true">📞</div>
+              <div>
+                <p class="contact-info__label">Telefone / WhatsApp</p>
+                <p class="contact-info__value">
+                  <a href="tel:+551199999-0000">(11) 9 9999-0000</a><br>
+                  <a href="tel:+551132222-0000">(11) 3222-0000</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon" aria-hidden="true">✉️</div>
+              <div>
+                <p class="contact-info__label">E-mail</p>
+                <p class="contact-info__value">
+                  <a href="mailto:contato@facearte.com.br">contato@facearte.com.br</a><br>
+                  <a href="mailto:agendamentos@facearte.com.br">agendamentos@facearte.com.br</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon" aria-hidden="true">🕐</div>
+              <div>
+                <p class="contact-info__label">Horário de Atendimento</p>
+                <p class="contact-info__value">
+                  Segunda a Sexta: 9h às 20h<br>
+                  Sábado: 9h às 17h<br>
+                  Domingo: Fechado
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <p class="contact-socials__title">Siga nossas redes</p>
+              <div class="social-links">
+                <a href="#" class="social-link" aria-label="Instagram">📸</a>
+                <a href="#" class="social-link" aria-label="Facebook">👍</a>
+                <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+                <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+                <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+              </div>
+            </div>
+          </aside>
+
+          <div class="reveal reveal-delay-2">
+            <div class="form-card">
+              <h2 class="form-card__title">Envie sua mensagem</h2>
+              <p class="form-card__subtitle">
+                Preencha o formulário abaixo e nossa equipe entrará em contato em breve.
+              </p>
+
+              <form id="form-contato" novalidate aria-label="Formulário de contato">
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="nome" class="form-label">Nome completo *</label>
+                    <input
+                      type="text"
+                      id="nome"
+                      name="nome"
+                      class="form-input"
+                      placeholder="Seu nome"
+                      required
+                      autocomplete="name"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email" class="form-label">E-mail *</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-input"
+                      placeholder="seu@email.com"
+                      required
+                      autocomplete="email"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="telefone" class="form-label">Telefone / WhatsApp</label>
+                    <input
+                      type="tel"
+                      id="telefone"
+                      name="telefone"
+                      class="form-input"
+                      placeholder="(11) 9 0000-0000"
+                      autocomplete="tel"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="servico" class="form-label">Tratamento de interesse</label>
+                    <select id="servico" name="servico" class="form-select">
+                      <option value="">Selecionar tratamento…</option>
+                      <optgroup label="Facial">
+                        <option value="Harmonização Orofacial">Harmonização Orofacial</option>
+                        <option value="Peeling Químico">Peeling Químico</option>
+                        <option value="Hidratação Profunda">Hidratação Profunda</option>
+                        <option value="Microagulhamento">Microagulhamento</option>
+                      </optgroup>
+                      <optgroup label="Corporal">
+                        <option value="Drenagem Linfática">Drenagem Linfática</option>
+                        <option value="Modelagem Corporal">Modelagem Corporal</option>
+                        <option value="Tratamento de Celulite">Tratamento de Celulite</option>
+                      </optgroup>
+                      <optgroup label="Laser &amp; Tecnologia">
+                        <option value="Radiofrequência Facial">Radiofrequência Facial</option>
+                        <option value="Fototerapia LED">Fototerapia LED</option>
+                        <option value="HIFU">HIFU Ultrassom Microfocado</option>
+                      </optgroup>
+                      <optgroup label="Bem-Estar">
+                        <option value="Ritual de Beleza Completo">Ritual de Beleza Completo</option>
+                        <option value="Massagem Relaxante">Massagem Relaxante</option>
+                      </optgroup>
+                      <option value="Avaliação Gratuita">Avaliação Gratuita</option>
+                      <option value="Outro">Outro</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="mensagem" class="form-label">Mensagem *</label>
+                  <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    class="form-textarea"
+                    placeholder="Conte-nos como podemos ajudá-la. Qual sua principal preocupação? Prefere algum horário específico?"
+                    required
+                    rows="5"
+                  ></textarea>
+                </div>
+
+                <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
+
+                <button type="submit" class="btn btn--primary form-submit">
+                  Enviar Mensagem
+                </button>
+
+                <p style="font-size: 0.75rem; color: var(--c-text-mute); margin-top: 1rem; text-align: center;">
+                  * Campos obrigatórios. Seus dados são tratados com total sigilo conforme nossa
+                  <a href="#" style="color: var(--c-gold);">Política de Privacidade</a>.
+                </p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <div class="container">
+        <div class="map-embed">
+          
+          <div class="map-placeholder">
+            <span>🗺️</span>
+            <strong>Av. Paulista, 1000 - Sala 42</strong>
+            <span>Bela Vista, São Paulo - SP</span>
+            <a href="https://goo.gl/maps/exemplo" target="_blank" rel="noopener noreferrer"
+               class="btn btn--outline" style="margin-top: 0.5rem; font-size: 0.78rem;">
+              Abrir no Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="faq-title">
+      <div class="container" style="max-width: 760px;">
+        <div class="reveal" style="text-align: center;">
+          <span class="tag">Dúvidas Frequentes</span>
+          <h2 class="section-title" id="faq-title">Perguntas <em>frequentes</em></h2>
+          <div class="divider" style="margin-inline: auto;"></div>
+        </div>
+
+        <div style="margin-top: var(--gap-lg); display: flex; flex-direction: column; gap: var(--gap-sm);">
+
+          <details class="reveal" style="border: 1px solid var(--c-border); border-radius: var(--radius-lg); padding: 1.5rem; background: var(--c-surface);">
+            <summary style="font-family: var(--font-serif); font-size: 1.1rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              A avaliação inicial realmente é gratuita?
+              <span style="color: var(--c-gold); font-size: 1.3rem; font-weight: 300;">+</span>
+            </summary>
+            <p style="margin-top: 1rem; color: var(--c-text-mute); font-size: 0.92rem; line-height: 1.75;">
+              Sim! Nossa consulta diagnóstica inicial é totalmente gratuita e sem compromisso. Você terá uma avaliação completa da sua pele e receberá um plano de tratamento personalizado.
+            </p>
+          </details>
+
+          <details class="reveal reveal-delay-1" style="border: 1px solid var(--c-border); border-radius: var(--radius-lg); padding: 1.5rem; background: var(--c-surface);">
+            <summary style="font-family: var(--font-serif); font-size: 1.1rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              Os procedimentos causam dor?
+              <span style="color: var(--c-gold); font-size: 1.3rem; font-weight: 300;">+</span>
+            </summary>
+            <p style="margin-top: 1rem; color: var(--c-text-mute); font-size: 0.92rem; line-height: 1.75;">
+              A maioria dos nossos procedimentos é minimamente desconfortável. Aplicamos anestésicos tópicos quando necessário e trabalhamos sempre com o máximo de conforto para a cliente.
+            </p>
+          </details>
+
+          <details class="reveal reveal-delay-2" style="border: 1px solid var(--c-border); border-radius: var(--radius-lg); padding: 1.5rem; background: var(--c-surface);">
+            <summary style="font-family: var(--font-serif); font-size: 1.1rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              Quanto tempo demoram para aparecer os resultados?
+              <span style="color: var(--c-gold); font-size: 1.3rem; font-weight: 300;">+</span>
+            </summary>
+            <p style="margin-top: 1rem; color: var(--c-text-mute); font-size: 0.92rem; line-height: 1.75;">
+              Depende do procedimento. Alguns apresentam resultados imediatos (como a drenagem linfática). Outros, como o microagulhamento e a radiofrequência, têm progressão gradual ao longo de 4 a 12 semanas.
+            </p>
+          </details>
+
+          <details class="reveal reveal-delay-3" style="border: 1px solid var(--c-border); border-radius: var(--radius-lg); padding: 1.5rem; background: var(--c-surface);">
+            <summary style="font-family: var(--font-serif); font-size: 1.1rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              Vocês atendem planos de saúde?
+              <span style="color: var(--c-gold); font-size: 1.3rem; font-weight: 300;">+</span>
+            </summary>
+            <p style="margin-top: 1rem; color: var(--c-text-mute); font-size: 0.92rem; line-height: 1.75;">
+              No momento atendemos apenas de forma particular. Aceitamos cartões de crédito, débito, Pix e oferecemos parcelamento em até 12x sem juros nos pacotes de tratamento.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="footer__brand-name">Face &amp; Arte</span>
+          <span class="footer__brand-sub">Clínica Estética</span>
+          <p class="footer__brand-desc">Referência em estética de alto padrão, unindo ciência, tecnologia e cuidado personalizado.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">👍</a>
+            <a href="#" class="footer__social-link" aria-label="WhatsApp">💬</a>
+            <a href="#" class="footer__social-link" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Navegação</h3>
+          <ul class="footer__links">
+            <li><a href="index.html"       class="footer__link">Início</a></li>
+            <li><a href="sobre.html"       class="footer__link">Quem Somos</a></li>
+            <li><a href="tratamentos.html" class="footer__link">Tratamentos</a></li>
+            <li><a href="contato.html"     class="footer__link">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Tratamentos</h3>
+          <ul class="footer__links">
+            <li><a href="tratamentos.html" class="footer__link">Facial</a></li>
+            <li><a href="tratamentos.html" class="footer__link">Corporal</a></li>
+            <li><a href="tratamentos.html" class="footer__link">Laser &amp; Tecnologia</a></li>
+            <li><a href="tratamentos.html" class="footer__link">Bem-Estar</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Contato</h3>
+          <ul class="footer__links">
+            <li class="footer__link">Av. Paulista, 1000 - Sala 42</li>
+            <li class="footer__link">Bela Vista, São Paulo - SP</li>
+            <li><a href="tel:+551199999-0000" class="footer__link">(11) 9 9999-0000</a></li>
+            <li><a href="mailto:contato@facearte.com.br" class="footer__link">contato@facearte.com.br</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2025 Clínica Face &amp; Arte. Todos os direitos reservados.</p>
+        <nav class="footer__legal" aria-label="Links legais">
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Termos de Uso</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
