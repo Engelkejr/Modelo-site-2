@@ -5,6 +5,7 @@ const path = require('path');
 const { body, validationResult } = require('express-validator');
 const { inserirMensagem } = require('./database');
 const fs = require('fs');
+require('dotenv').config();
 
 const dataDir = path.join(__dirname, 'data');
 if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
