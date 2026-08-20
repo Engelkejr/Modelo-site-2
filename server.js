@@ -1,8 +1,8 @@
-const express = require('express');
+﻿const express = require('express');
 const path = require('path');
 const { body, validationResult } = require('express-validator');
 const { inserirMensagem } = require('./database');
-// const fs = require('fs'); // Você não precisa mais de fs se estiver usando Supabase
+
 require('dotenv').config();
 
 const app = express();
@@ -12,7 +12,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Rota de Contato corrigida
 app.post(
   '/api/contato',
   [
@@ -22,7 +21,7 @@ app.post(
     body('servico').optional({ checkFalsy: true }).trim().isLength({ max: 100 }),
     body('mensagem').trim().notEmpty().withMessage('A mensagem é obrigatória.').isLength({ max: 2000 }),
   ],
-  async (req, res) => { // ADICIONADO: async aqui
+  async (req, res) => {
     const erros = validationResult(req);
     if (!erros.isEmpty()) {
       return res.status(422).json({
@@ -34,7 +33,7 @@ app.post(
     const { nome, email, telefone, servico, mensagem } = req.body;
 
     try {
-      // ADICIONADO: await aqui para esperar o Supabase responder
+
       const resultado = await inserirMensagem({ nome, email, telefone, servico, mensagem });
 
       console.log(`[API] Nova mensagem de "${nome}" | ID: ${resultado.lastInsertRowid}`);
